@@ -1,10 +1,18 @@
 <mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer mode="over" class="sidenav">Menu
-
+    <mat-drawer #drawer mode="over" class="sidenav">
+      
+      <button mat-button routerLink="/customers">Customers</button>
+      <button mat-button routerLink="/orders">Orders</button>
+      <button mat-button routerLink="/messages">Messages</button>
+    
     </mat-drawer>
     <mat-drawer-content class="sidenav-content">
         <button mat-icon-button (click)="drawer.toggle()">
             <mat-icon aria-label="label">menu</mat-icon>
         </button>
-    </mat-drawer-content>
+      <router-outlet></router-outlet>
+        
+      </mat-drawer-content>
+    
 </mat-drawer-container>
+

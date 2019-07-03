@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
     { 
-      path: 'customer', 
-      loadChildren: './customers/customers.module#CustomerModule' 
+      path: 'customers', 
+      loadChildren: './customers/customers.module#CustomersModule' 
     },
     { 
       path: 'orders', 
@@ -12,8 +12,8 @@ const routes: Routes = [
     },
     
     { 
-      path: 'message', 
-      loadChildren: './message/message.module#MessageModule' 
+      path: 'messages', 
+      loadChildren: './messages/messages.module#MessagesModule' 
     },
     
     { 

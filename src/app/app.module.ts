@@ -7,18 +7,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { MaterialModule } from './Material/materia';
-import { CustomerListComponent } from './customers/customer-list/customer-list.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerListComponent,
+    
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    
+   
     BrowserAnimationsModule,
     MaterialModule
   ],
