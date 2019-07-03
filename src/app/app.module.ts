@@ -4,15 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavegacionComponent } from './navegacion/navegacion.component';
+
 
 import { MaterialModule } from './Material/materia';
+import { CustomerListComponent } from './customers/customer-list/customer-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavegacionComponent,
+    CustomerListComponent,
   
   ],
   imports: [
