@@ -12,8 +12,8 @@ const routes: Routes = [
     },
     
     { 
-      path: 'messages', 
-      loadChildren: './messages/messages.module#MessagesModule' 
+      path: 'message', 
+      loadChildren: './message/messages.module#MessagesModule' 
     },
     
     { 
