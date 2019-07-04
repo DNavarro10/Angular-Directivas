@@ -7,6 +7,10 @@ const routes: Routes = [
       loadChildren: './customers/customers.module#CustomersModule' 
     },
     { 
+      path: 'info', 
+      loadChildren: './customers/customers.module#CustomersModule' 
+    },
+    { 
       path: 'orders', 
       loadChildren: './orders/orders.module#OrdersModule' 
     },
@@ -15,6 +19,7 @@ const routes: Routes = [
       path: 'message', 
       loadChildren: './message/messages.module#MessagesModule' 
     },
+    
     
     { 
       path: '', 
