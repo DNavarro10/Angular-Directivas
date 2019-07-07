@@ -1,7 +1,24 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css'
 .mat-card
-    width: 600px
+    width: 50%
     margin: auto
     margin-top: 20px
-.mat-card .full-width
-    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.mat-card-content 
+    font-size: 14px
+    display: flex
+    flex-direction: column
+    padding: 20px
+    width: 80%
+    margin-bottom: 10px
+    justify-content: center
+    align-self: center
+
+    .titulo, .mat-card-header-text
+        font-size: 30px
+        margin-left: -16px
+    .mat-card-actions
+        align-self: center
