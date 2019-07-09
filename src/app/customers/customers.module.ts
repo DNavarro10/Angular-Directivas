@@ -1,32 +1,38 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { CustomerNewComponent } from './customer-new/customer-new.component';
+import { CustomersCardComponent } from './customers-card/customers-card.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';
+import { RepDialogComponent } from './customer-new/rep-dialog/rep-dialog.component';
 
 import { CustomersRoutingModule } from './customers-routing.module';
-import { CustomerListComponent } from './customer-list/customer-list.component';
-import { CustomersCardComponent } from './customers-card/customers-card.component';
+
+
+
 
 import { MatButtonModule } from '@angular/material/button';
-
-import { MatCardModule, MatIconModule } from '@angular/material';
-import { CustomerNewComponent } from './customer-new/customer-new.component';
-import { MaterialModule } from '../Material/materia';
+import { MatCardModule, MatIconModule, MatDialogModule, MatRadioModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../Material/materia';
 
 
 
 @NgModule({
-  declarations: [CustomerListComponent, CustomersCardComponent, CustomerNewComponent,],
+  declarations: [CustomerListComponent, CustomersCardComponent, CustomerNewComponent, RepDialogComponent],
+  entryComponents:[RepDialogComponent],
+
   imports: [
     CommonModule,
     CustomersRoutingModule,
     FormsModule,
+    MatDialogModule,
     ReactiveFormsModule,
     MaterialModule,
     MatButtonModule,
     MatCardModule,
-    MatIconModule
+    MatRadioModule,
+    MatIconModule,
+    
   ]
 })
 export class CustomersModule { }

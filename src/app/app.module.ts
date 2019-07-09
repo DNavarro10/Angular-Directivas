@@ -10,9 +10,11 @@ import { MaterialModule } from './Material/materia';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    
     
   
   ],
