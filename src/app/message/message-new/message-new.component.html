@@ -26,7 +26,7 @@
                   </mat-form-field>
 
                 <div>
-                    <button mat-button matStepperNext>Next</button>
+                    <button mat-raised-button color="primary" matStepperNext>Next</button>
                 </div>
             </form>
         </mat-step>
@@ -39,8 +39,8 @@
 
                
                 <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Next</button>
+                    <button mat-raised-button color="primary"  matStepperPrevious>Back</button>
+                    <button mat-raised-button color="primary"  matStepperNext>Next</button>
                 </div>
             </form>
         </mat-step>
@@ -48,8 +48,8 @@
             <ng-template matStepLabel>Done</ng-template>
             You are now done.
             <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button (click)="stepper.reset()">Reset</button>
+                <button mat-raised-button color="primary"  matStepperPrevious>Back</button>
+                <button mat-raised-button color="warn"  (click)="stepper.reset()">Reset</button>
             </div>
         </mat-step>
     </mat-horizontal-stepper>
