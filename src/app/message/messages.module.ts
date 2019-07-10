@@ -6,7 +6,7 @@ import { MessagesListComponent } from './messages-list/messages-list.component';
 import { MessageNewComponent } from './message-new/message-new.component';
 import { MaterialModule } from '../Material/materia';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatAutocompleteModule } from '@angular/material';
+import { MatAutocompleteModule, MatTooltipModule } from '@angular/material';
 
 @NgModule({
   declarations: [MessagesListComponent, MessageNewComponent],
@@ -16,6 +16,7 @@ import { MatAutocompleteModule } from '@angular/material';
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
+    MatTooltipModule,
     MaterialModule
   ]
 })
