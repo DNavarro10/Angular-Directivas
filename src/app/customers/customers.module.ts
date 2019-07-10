@@ -11,7 +11,7 @@ import { CustomersRoutingModule } from './customers-routing.module';
 
 
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule, MatIconModule, MatDialogModule, MatRadioModule } from '@angular/material';
+import { MatCardModule, MatIconModule, MatDialogModule, MatRadioModule, MatSnackBarModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../Material/materia';
 
@@ -32,6 +32,7 @@ import { MaterialModule } from '../Material/materia';
     MatCardModule,
     MatRadioModule,
     MatIconModule,
+    MatSnackBarModule
     
   ]
 })

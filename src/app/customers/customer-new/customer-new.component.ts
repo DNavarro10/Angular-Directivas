@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { RepDialogComponent } from '../customer-new/rep-dialog/rep-dialog.component';
 
 
@@ -15,7 +15,7 @@ export class CustomerNewComponent implements OnInit {
   emailFormControl: FormControl;
   dialogRef: any;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public _snackBar: MatSnackBar) { }
 
   ngOnInit() {
 
@@ -41,5 +41,11 @@ export class CustomerNewComponent implements OnInit {
   onNoClick(){
     this.dialog.ngOnDestroy()
 }
+  snakBarOpen(){
+    this._snackBar.open('Customer Saved', 'UNDONE',{
+      duration: 3000,
+      
+    });
+  }
 
 }
