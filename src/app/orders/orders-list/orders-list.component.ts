@@ -341,7 +341,7 @@ export class OrdersListComponent implements OnInit {
   dataSource:MatTableDataSource<object>; //cargar datos - los nuevos seran con el loadData
   
   //propiedades del paginator
-    length:number = 100;
+    length:number = ELEMENT_DATA.length;
     pageIndex:number = 0;
     pageSize:number = 10;
     pageSizeOptions:Array<number> = [1,2,5,10];
