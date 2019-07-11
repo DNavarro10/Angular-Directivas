@@ -6,32 +6,74 @@ import { DataSource } from '@angular/cdk/table';
 //data 
 const ELEMENT_DATA = [
   {
-    orderDAta: new Date(),
-    oderNumber: 100,
+    orderDate: new Date(),
+    orderNumber: 100,
     total: 29.99,
-    description: '21 kilos of meat',
-    isCheked: false
+    orderDescription: '21 kls of meat',
+    isChecked: false
   },
   {
-    orderDAta: new Date(),
-    oderNumber: 101,
+    orderDate: new Date(),
+    orderNumber: 101,
     total: 15.99,
-    description: '10 kils of cheese',
-    isCheked: false
+    orderDescription: '10 kls of cheese',
+    isChecked: false
   },
   {
-    orderDAta: new Date(),
-    oderNumber: 102,
+    orderDate: new Date(),
+    orderNumber: 102,
     total: 10.99,
-    description: '12 beers',
-    isCheked: true
+    orderDescription: '12 beers',
+    isChecked: false
   },
   {
-    orderDAta: new Date(),
-    oderNumber: 103,
+    orderDate: new Date(),
+    orderNumber: 103,
     total: 49.99,
-    description: '20 kilos of rice',
-    isCheked: true
+    orderDescription: '20 kls of rice',
+    isChecked: false
+  },
+  {
+    orderDate: new Date(),
+    orderNumber: 101,
+    total: 15.99,
+    orderDescription: '10 kls of cheese',
+    isChecked: false
+  },
+  {
+    orderDate: new Date(),
+    orderNumber: 102,
+    total: 10.99,
+    orderDescription: '12 beers',
+    isChecked: false
+  },
+  {
+    orderDate: new Date(),
+    orderNumber: 103,
+    total: 49.99,
+    orderDescription: '20 kls of rice',
+    isChecked: false
+  },
+  {
+    orderDate: new Date(),
+    orderNumber: 101,
+    total: 15.99,
+    orderDescription: '10 kls of cheese',
+    isChecked: false
+  },
+  {
+    orderDate: new Date(),
+    orderNumber: 102,
+    total: 10.99,
+    orderDescription: '12 beers',
+    isChecked: false
+  },
+  {
+    orderDate: new Date(),
+    orderNumber: 103,
+    total: 49.99,
+    orderDescription: '20 kls of rice',
+    isChecked: false
   },
 ];
 
@@ -48,13 +90,20 @@ export class OrdersListComponent implements OnInit {
 
   //crear sort
   
-  @ViewChild( MatSort, {static: true}) sort: MatSort;
+  @ViewChild( MatSort, {static: false}) sort: MatSort;
 
   constructor() { }
 
   ngOnInit() {
    this.dataSource.sort = this.sort;
 
+  }
+
+  selectAll(){
+    for (var element of ELEMENT_DATA) 
+    {
+      element.isChecked = !element.isChecked
+    }
   }
 
 }
