@@ -1,13 +1,20 @@
 <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer mode="over" class="sidenav">
 
-    <button mat-button color="primary" routerLink="/customers">Customers</button>
-    <button mat-button color="primary" routerLink="/customers/new-customer">New-Customer</button>
-    <button mat-button color="primary" routerLink="/customers/info">Customers cards</button>
-    <button mat-button color="primary" routerLink="/orders">Orders</button>
-    <button mat-button color="primary" routerLink="/orders/order-new">New Order</button>
-    <button mat-button color="primary" routerLink="/message">Messages</button>
-    <button mat-button color="primary" routerLink="/message/new-mail">New-mail</button>
+    <a mat-button color="primary" [routerLinkActiveOptions]=" {
+    exact: true}" [routerLinkActive]="['active']" [routerLink]='["/customers"]'>Customers</a>
+    <a mat-button color="primary" [routerLinkActiveOptions]=" {
+    exact: true}" [routerLinkActive]="['active']" [routerLink]='["/customers/new-customer"]'>New-Customer</a>
+    <a mat-button color="primary" [routerLinkActiveOptions]=" {
+    exact: true}" [routerLinkActive]="['active']" [routerLink]='["/customers/info"]'>Customers cards</a>
+    <a mat-button color="primary" [routerLinkActiveOptions]=" {
+    exact: true}" [routerLinkActive]="['active']" [routerLink]='["/orders"]'>Orders</a>
+    <a mat-button color="primary" [routerLinkActiveOptions]=" {
+    exact: true}" [routerLinkActive]="['active']" [routerLink]='["/orders/order-new"]'>New-Order</a>
+    <a mat-button color="primary" [routerLinkActiveOptions]=" {
+    exact: true}" [routerLinkActive]="['active']" [routerLink]='["/message"]'>Messages</a>
+    <a mat-button color="primary" [routerLinkActiveOptions]=" {
+    exact: true}" [routerLinkActive]="['active']" [routerLink]='["/message/new-mail"]'>New-mail</a>
 
   </mat-drawer>
   <mat-drawer-content class="sidenav-content">
@@ -26,7 +33,7 @@
           <mat-icon>more_vert</mat-icon>
         </button>
 
-       
+
         <mat-menu #menu="matMenu">
           <button mat-menu-item>
             <mat-icon>publish</mat-icon>
@@ -48,7 +55,7 @@
 
       </mat-toolbar-row>
     </mat-toolbar>
-  
+
     <router-outlet></router-outlet>
 
   </mat-drawer-content>

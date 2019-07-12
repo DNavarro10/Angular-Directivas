@@ -10,9 +10,11 @@ import { MaterialModule } from './Material/materia';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    
     
     
   
@@ -20,7 +22,7 @@ import { MaterialModule } from './Material/materia';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    
     
    
     BrowserAnimationsModule,
