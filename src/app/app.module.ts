@@ -10,7 +10,6 @@ import { MaterialModule } from './Material/materia';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +26,7 @@ import { MaterialModule } from './Material/materia';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
