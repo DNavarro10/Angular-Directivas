@@ -1,25 +1,30 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css"
-.mat-card
-    max-width: 300px
-    margin: auto
-    margin-top: 30px
-    &:hover
-        box-shadow: 3px 3px 10px rgba(10,20,50)
-    .avatar
-        background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg')
-        background-size: cover
-     
-    .mat-card-actions
-        display: flex
-        .mat-raised-button
-            width: 200px
-            margin: 10px 
-    .mat-card-actions .flex-spacer
-        width: 100%
+.container
+    display: grid
+    height: 90vh
+    justify-content: center
+    align-items: center
+    .mat-card
+        max-width: 300px
+        height: auto
+    
+        &:hover
+            box-shadow: 3px 3px 10px rgba(10,20,50)
+        .avatar
+            background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg')
+            background-size: cover
+        
+        .mat-card-actions
+            display: flex
+            .mat-raised-button
+                width: 200px
+                margin: 10px 
+        .mat-card-actions .flex-spacer
+            width: 100%
 
-    .mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button
-        align-self: center
-        .example-tooltip-red 
-            background: #b71c1c
+        .mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button
+            align-self: center
+            .example-tooltip-red 
+                background: #b71c1c
 
-   
+    

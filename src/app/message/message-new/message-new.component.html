@@ -1,5 +1,5 @@
 
-<mat-horizontal-stepper [linear]="false" labelPosition="bottom" #stepper>
+<mat-horizontal-stepper [linear]="true" labelPosition="bottom" #stepper>
         <mat-step [stepControl]="firstFormGroup" class="header">
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Fill out your name</ng-template>
@@ -17,7 +17,7 @@
                   </mat-form-field>
 
                   <mat-form-field class="example-full-width">
-                    <input type="text" placeholder="Departments" aria-label="text" matInput [formControl]="departmentCtrl" [matAutocomplete]="auto2" required >
+                    <input type="text" placeholder="Choose department" aria-label="text" matInput [formControl]="departmentCtrl" [matAutocomplete]="auto2" required >
                     <mat-autocomplete #auto2="matAutocomplete" [displayWith]="getDepartmentName" role="combo-box">
                       <mat-option *ngFor="let department of departments" [value]="department">
                         {{department.name}}

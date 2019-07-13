@@ -7,7 +7,7 @@
     bottom: 0
 .active
     background: purple
-    color: white
+  
 .container .mat-drawer
     min-width: 200px
     box-shadow: 2px 2px 5px black
@@ -18,10 +18,13 @@
     text-align: left
     font-size: 16px
     padding: 5px 5px 0px 10px
-    transition: .5s all
+    transition: ease .3s all
     margin: auto
     margin: 7px 0px 7px 5px
     color: #fff
+    &:hover
+        background: purple
+   
     
 .mat-horizontal-stepper
     display: block
@@ -33,6 +36,13 @@
 
 .spacer
     flex: 1 1 auto  //right aling
+.mat-menu-item .mat-icon 
+    margin-right: 16px
+    vertical-align: middle
+    color: gray
+
+.mat-menu-item
+    color: black
 
 
 .example-tooltip-red
