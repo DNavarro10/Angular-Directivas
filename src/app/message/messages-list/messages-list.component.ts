@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messages-list.component.sass']
 })
 export class MessagesListComponent implements OnInit {
+  public identificado: boolean;
 
-  constructor() { }
+  constructor() { 
+
+  this.identificado = false;
+
+  }
 
   ngOnInit() {
   }
 
+  setIdentificado(){
+    this.identificado = true;
+
+  }
+  unsetIdentificiado(){
+    this.identificado = false;
+  }
 }

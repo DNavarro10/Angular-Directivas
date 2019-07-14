@@ -1,5 +1,13 @@
-<div class="text-center">
+<div class="container">
+  <div *ngIf="identificado; else noIdentificado" class="id">
+    <h3 class="mat-3 mat-headline">Estas identificado</h3>
+    <button mat-raised-button color="primary" (click)="unsetIdentificiado()">Volver</button>
+    
+  </div>
+  <ng-template #noIdentificado>
+      <h2 class="mat-h2">Identificación</h2>
+    <p class="mat-body-1">No estas identificado, pulsa este botón para identificarte</p>
+    <button mat-raised-button color="primary" (click)="setIdentificado()">Identificar</button>
+  </ng-template>
 
-    <h1 class="display-2">messages-list works!</h1>
 </div>
-
