@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { MaterialModule } from './Material/materia';
+import { ServiciosService } from './services/servicios.service';
 
 
 
@@ -14,21 +15,16 @@ import { MaterialModule } from './Material/materia';
 @NgModule({
   declarations: [
     AppComponent,
-    
-    
-    
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
-    
-   
+
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers:[],
+  providers:[ServiciosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
