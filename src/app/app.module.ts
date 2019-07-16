@@ -15,12 +15,13 @@ import { ServiciosService } from './services/servicios.service';
 @NgModule({
   declarations: [
     AppComponent,
+ 
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    
     BrowserAnimationsModule,
     MaterialModule
   ],

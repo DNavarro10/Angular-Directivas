@@ -65,7 +65,7 @@ export class OrdersListComponent implements OnInit {
 
   onPageChange(e) {
     //calcula los valores del paginador
-    this.pageIndex = e.pageIndex * this.pageSize; //calcula el index
+    this.pageIndex = e.pageIndex * this.pageSize; //calcula el index actual
 
     this.pageSize = e.pageSize;
 
