@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './Material/materia';
 import { ServiciosService } from './services/servicios.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -16,7 +17,7 @@ import { ServiciosService } from './services/servicios.service';
 @NgModule({
   declarations: [
     AppComponent,
-  
+    
   
   ],
   imports: [
