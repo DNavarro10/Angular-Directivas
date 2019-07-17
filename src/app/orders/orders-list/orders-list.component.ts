@@ -2,12 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort, MatTableDataSource, PageEvent } from '@angular/material';
 import { ServiciosService } from '../../services/servicios.service';  //importar servicios
 
-
-
-
-//data 
-
-
 @Component({
   selector: 'app-orders-list',
   templateUrl: './orders-list.component.html',
@@ -22,9 +16,9 @@ export class OrdersListComponent implements OnInit {
   //columnas y datos
   displayedColumns: string[] = ['action', 'orderNumber', 'orderDate', 'description', 'total'];
   dataSource: MatTableDataSource<object>; //cargar datos - los nuevos seran con el loadData
-  largo: any = 0;
+ 
   //propiedades del paginator
-  length: number = 0 ;  //this. pora referir al public
+  length: number = 0;  //this. pora referir al public
   pageIndex: number = 0;
   pageSize: number = 10;
   pageSizeOptions: Array<number> = [1, 2, 5, 10];
@@ -38,19 +32,20 @@ export class OrdersListComponent implements OnInit {
   //se declara servicio usando  _Nombre + servicio
   constructor(private _servicio: ServiciosService) {
     // Get the size of an object
+
   }
 
   ngOnInit() {
     //se debe iniciar los datos en el init
     //operacion para sacar lenght del array en el servicio, largo recibe & length muestra
-    this.largo = this._servicio.array(); 
+    
     this.ELEMENT_DATA = this._servicio.getDatos();
-    this.length =  Object.size(this.ELEMENT_DATA);
+    this.length = Object.keys(this.ELEMENT_DATA).length;  
     //carga la informacion al iniciar
     this.loadData(0, this.pageSize); this.dataSource.sort = this.sort;
 
   }
-  
+
 
   //funcion para el checkbox, selecionar todos
   selectAll() {
