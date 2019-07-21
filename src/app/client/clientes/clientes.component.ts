@@ -10,12 +10,21 @@ import { ClientService } from '../../services/client.service';
 export class ClientesComponent implements OnInit {
 
   public user: any;
-
-  constructor(private _peticionService: ClientService) { }
+  public userId: any;
+  constructor(private _peticionService: ClientService) {
+   //iniciando
+    this.userId = 1;
+   }
 
   ngOnInit() {
-    
-    this._peticionService.getUser().subscribe(
+
+    this.loadUser(); //funcion
+
+  }
+
+  loadUser(){
+      //peticion
+    this._peticionService.getUser(this.userId).subscribe(
       result =>{
         this.user = result.data;
       },

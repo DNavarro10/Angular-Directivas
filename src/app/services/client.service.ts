@@ -19,8 +19,8 @@ export class ClientService {
 
    }  
 
-   getUser(): Observable<any>{
-     return this._htt.get(this.url + 'api/users/2')
+   getUser(userId): Observable<any>{
+     return this._htt.get(this.url + 'api/users/'+ userId)
    }
 
 }

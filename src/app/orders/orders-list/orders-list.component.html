@@ -58,8 +58,8 @@
           <td mat-cell *matCellDef="let element">
               {{ element.total | currency: '$' }}
           </td>
-          <td mat-footer-cell *matFooterCellDef>
-                $ 100.00
+          <td mat-footer-cell *matFooterCellDef="let element">
+              
           </td>
         </ng-container>
 

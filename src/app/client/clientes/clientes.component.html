@@ -1,5 +1,7 @@
-<p>clientes works!</p>
-
-<div *ngIf="user">
-    <h2 class="display-2">{{ user.first_name + ' ' + user.last_name}}</h2>
+<div class="container">
+    <input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()">
+    <div *ngIf="user">
+        <img src="{{user.avatar}}" alt="imagen" srcset="">
+        <h2 class="mat-h2 display-2">{{ user.first_name + ' ' + user.last_name}}</h2>
+    </div>
 </div>

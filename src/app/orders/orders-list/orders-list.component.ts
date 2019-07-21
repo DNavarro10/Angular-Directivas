@@ -37,7 +37,7 @@ export class OrdersListComponent implements OnInit {
 
   ngOnInit() {
     //se debe iniciar los datos en el init
-    //operacion para sacar lenght del array en el servicio, largo recibe & length muestra
+    //operacion para sacar lenght del array en el servicio, recibe & length muestra
     
     this.ELEMENT_DATA = this._servicio.getDatos();
     this.length = Object.keys(this.ELEMENT_DATA).length;  
@@ -61,15 +61,12 @@ export class OrdersListComponent implements OnInit {
   onPageChange(e) {
     //calcula los valores del paginador
     this.pageIndex = e.pageIndex * this.pageSize; //calcula el index actual
-    
-    console.log(this.pageIndex);
+ 
     this.pageSize = e.pageSize;
-    console.log(this.pageSize);
-    this.loadData(this.pageIndex, this.pageSize);
-    console.log(this.pageSize);
-    //reinicia los valores del sort dependiendo de la pag en que se encuentra
-    this.loadData(0, this.pageSize); this.dataSource.sort = this.sort;
 
-    console.log(this.dataSource);
+    this.loadData(this.pageIndex, this.pageSize);
+
+
   }
+
 }
