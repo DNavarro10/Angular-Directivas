@@ -8,6 +8,7 @@ import { ClientService } from '../../services/client.service';
   providers:[ClientService]  //provaiders siempre cuando se hace un injectacble
 })
 export class ClientesComponent implements OnInit {
+  showSpinner: boolean = true;
 
   public user: any;
   public userId: any;
@@ -19,7 +20,7 @@ export class ClientesComponent implements OnInit {
   ngOnInit() {
 
     this.loadUser(); //funcion
-
+    
   }
 
   loadUser(){
@@ -27,6 +28,7 @@ export class ClientesComponent implements OnInit {
     this._peticionService.getUser(this.userId).subscribe(
       result =>{
         this.user = result.data;
+        this.showSpinner = false;
       },
       error =>{
         console.log(error);

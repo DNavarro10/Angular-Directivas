@@ -10,6 +10,7 @@ import { MaterialModule } from './Material/materia';
 import { ServiciosService } from './services/servicios.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 
 
 
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
+    LoadingSpinnerComponent,
     
   
   ],

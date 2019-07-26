@@ -1,7 +1,18 @@
 <div class="container">
-    <input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()">
-    <div *ngIf="user">
-        <img src="{{user.avatar}}" alt="imagen" srcset="">
-        <h2 class="mat-h2 display-2">{{ user.first_name + ' ' + user.last_name}}</h2>
-    </div>
+
+      <form class="example-form" *ngIf="user" class="form">
+            <mat-spinner
+                [value]="false">
+            </mat-spinner>
+            <img src="{{user.avatar}}" alt="imagen" srcset="">
+            <h2 class="mat-h2 display-2">{{ user.first_name + ' ' + user.last_name}}</h2>
+            
+             <mat-form-field class="example-full-width">
+
+              
+              <input matInput type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()" placeholder="Buscar por ID" value="1" [ngModelOptions]="{standalone: true}" >
+            </mat-form-field>
+         
+        </form>
+          
 </div>
